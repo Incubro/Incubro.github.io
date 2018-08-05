@@ -140,11 +140,15 @@ body > section,
 	Header
 ==========================================*/
 
-#navigation {
-  font-family: Montserrat,Arial,sans-serif;
+#navigation { 
+  transition: all .2s ease-in-out;
+  /*padding-top: 12px;*/
+  padding: 20px 50px;
+  font-family: Avenir,Arial,Helvetica,sans-serif;
   font-size: 13px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 300;
+
   background-color: rgba(16, 22, 54, 0.2);
   border: 0 none;
   margin: 0;
@@ -157,6 +161,7 @@ body > section,
 }
 
 .navbar-toggle i {
+   border-radius: 15px;
 	color: #fff;
 }
 
@@ -165,20 +170,94 @@ body > section,
 }
 
 .navbar-nav li a {
-	border-top: 1px solid transparent;
+  border-radius: 15px;
+  padding: 4px;
+  
 }
 
+
+/*.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}*/
 .navbar-nav li a.active,
 .navbar-nav li a:focus,
 .navbar-nav li a:hover {
 	background-color: transparent;
-	border-top: 1px solid #32B0EE;
+	
 	color: #fff;
 }
 
+.navbar-nav li a, .dropbtn {
+    transition: background-color 200ms linear;
+    border-radius: 6%;
+    background-color: transparent;
+    font-family: Avenir,Arial,Helvetica,sans-serif;
+    padding-top: 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    /*background-color: rgba(16, 22, 54, 0.2);*/
+    border: 0 none;
+    margin: 0;
+    padding: 20px 30px;
+    color: white;
+/*    padding: 16px;*/
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+   
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    transition: background-color 800ms linear;
+    border-radius: 6%;
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {/*background-color: #f1f1f1*/
+color: #white !important;
+
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ /*Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn , .contact-us {
+    background-color: #3e8e41;
 
 
 
+}
 /*=========================================
 	Slider
 ==========================================*/
@@ -570,6 +649,10 @@ top: -8px;
 /*=========================================
 	Contact Us
 ==========================================*/
+.contact-us:hover {
+  color: white;
+
+}
 
 .contact {
 	padding-bottom: 0;
